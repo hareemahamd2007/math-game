@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathBlizt - Grade 8 Mental Maths</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- WELCOME SCREEN -->
+    <section id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-card">
+            <div class="welcome-icon">🧠</div>
+            <p class="welcome-tag">GRADE 8 EDITION</p>
+            <h1>Welcome to <span>MathBlizt!</span></h1>
+            <p class="welcome-text">
+                Train your brain, solve maths challenges
+                and become a Mental Maths Champion!
+            </p>
+            <div class="welcome-features">
+                <span>⭐ 3 Levels</span>
+                <span>⏱️ Timed Challenges</span>
+                <span>🪙 Earn Coins</span>
+            </div>
+            <button id="playGameBtn" class="main-button">
+                ▶ PLAY GAME
+            </button>
+        </div>
+    </section>
+
+    <!-- MAIN GAME -->
+    <main id="gameScreen" class="game-screen hidden">
+
+        <header class="top-header">
+            <div class="brand">
+                <span class="brand-icon">🧩</span>
+                <div>
+                    <h1>MathBlizt</h1>
+                    <small>Grade 8 Mental Maths</small>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <span>🏆</span>
+                    <strong id="score">0</strong>
+                    <small>Score</small>
+                </div>
+                <div class="stat-box">
+                    <span>🪙</span>
+                    <strong id="coins">0</strong>
+                    <small>Coins</small>
+                </div>
+                <div class="stat-box">
+                    <span>🔥</span>
+                    <strong id="streak">0</strong>
+                    <small>Streak</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="level-section">
+            <h2>Choose Your Level</h2>
+
+            <div class="level-buttons">
+                <button class="level active" data-level="1">
+                    <span>🌱</span>
+                    <strong>Level 1</strong>
+                    <small>Easy</small>
+                </button>
+
+                <button class="level" data-level="2">
+                    <span>⚡</span>
+                    <strong>Level 2</strong>
+                    <small>Medium</small>
+                </button>
+
+                <button class="level" data-level="3">
+                    <span>🔥</span>
+                    <strong>Level 3</strong>
+                    <small>Hard</small>
+                </button>
+            </div>
+        </section>
+
+        <section class="game-card">
+
+            <div class="game-heading">
+                <div>
+                    <p class="eyebrow">MENTAL MATHS CHALLENGE</p>
+                    <h2 id="levelText">Level 1 - Easy</h2>
+                </div>
+                <div class="question-count">
+                    <strong id="questionNumber">1</strong>
+                    <span>/ 20</span>
+                </div>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <div class="timer-area">
+                <span>⏱️ Time remaining</span>
+                <strong id="timer">30</strong>
+            </div>
+
+            <div class="question-area">
+                <div class="topic-label" id="topicLabel">Addition</div>
+                <h1 id="question">25 × 4 = ?</h1>
+                <p>Think carefully and enter your answer!</p>
+            </div>
+
+            <form id="answerForm">
+                <input
+                    id="answerInput"
+                    type="number"
+                    step="any"
+                    placeholder="Your answer..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" class="main-button check-button">
+                    CHECK ANSWER
+                </button>
+            </form>
+
+            <p id="message" class="message" aria-live="polite">
+                You can do it! 💪
+            </p>
+
+            <div class="game-footer">
+                <span>⭐ 20 questions per level</span>
+                <span>🧠 No calculator needed</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 MathBlizt | Train Your Brain!</p>
+            <p>Powered By Hareem Ahmad</p>
+        </footer>
+    </main>
+
+    <!-- RESULT SCREEN -->
+    <section id="resultScreen" class="result-screen hidden">
+        <div class="result-card">
+            <div class="result-icon" id="resultIcon">🏆</div>
+            <p class="eyebrow">CHALLENGE COMPLETED</p>
+            <h1 id="resultTitle">Amazing Work!</h1>
+            <p id="resultDescription">You completed the level!</p>
+
+            <div class="result-stats">
+                <div>
+                    <strong id="finalScore">0</strong>
+                    <span>Score</span>
+                </div>
+                <div>
+                    <strong id="finalCorrect">0/20</strong>
+                    <span>Correct</span>
+                </div>
+                <div>
+                    <strong id="finalCoins">0</strong>
+                    <span>Coins earned</span>
+                </div>
+            </div>
+
+            <button id="nextLevelBtn" class="main-button">
+                NEXT LEVEL →
+            </button>
+
+            <button id="retryBtn" class="secondary-button">
+                ↻ PLAY AGAIN
+            </button>
+
+            <button id="homeBtn" class="text-button">
+                Back to Welcome
+            </button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
